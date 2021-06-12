@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<root version="3.0" release="7">
+
+	<!-- Attributes -->
+	<properties>
+		<name>Teacher's Pet</name>
+		<description>
+			<text>Teacher's Pet</text>
+			<author>sarah</author>
+		</description>
+
+		</properties>
+
+	<announcement text="Hello class! I'm Miss Sarah and I'll be your substitute teacher for today" font="systemfont" icon="logo" />
+
+	<base>
+		<!-- Tabletop settings -->
+		<includefile source="graphics/graphics_icons.xml" />
+		<includefile source="common/template_windows.xml" />
+		<includefile source="desktop/desktop_classes.xml" />
+	
+	</base>
+</root>
+
+

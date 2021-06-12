@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+
+	<!-- Chat -->
+	<icon name="button_stop" file="graphics/icons/stop.png" />
+	<icon name="button_slow" file="graphics/icons/slow.png" />
+	<icon name="stop_sign" file="graphics/icons/stop_sign.png" />
+	<icon name="slow_sign" file="graphics/icons/slow_sign.png" />
+	<icon name="raise_hand_button" file="graphics/icons/raise_hand.png" />
+	<icon name="raise_hand_chat" file="graphics/icons/raise_hand_clear.png" />
+	<icon name="logo" file="graphics/icons/logo.png" />
+
+	</root>

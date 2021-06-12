@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- 
+  Please see the license.html file included with this distribution for 
+  attribution and copyright information.
+-->
+
+<root>
+
+	<template name="slow_base">
+		<buttoncontrol>
+			<icon normal="button_slow" pressed="button_slow" hover="button_slow" />
+			<tooltip><text>Double-Click to use Player Safety</text></tooltip>
+			<script>
+				function onDoubleClick()
+							local msg = {font = "reference-h", icon = "slow_sign"};
+							Comm.deliverChatMessage(msg);
+				end
+			</script>
+		</buttoncontrol>
+	</template>
+	<template name="player_slow">
+		<slow_base>
+			<anchored height="20" width="20">
+				<top offset="0" />
+				<left anchor="left" relation="relative" offset="20" />
+			</anchored>
+		</slow_base>
+	</template>
+	
+	<template name="stop_base">
+		<buttoncontrol>
+			<icon normal="button_stop" pressed="button_stop" hover="button_stop" />
+			<tooltip><text>Double-Click to use Player Safety</text></tooltip>
+			<script>
+				function onDoubleClick()
+							local msg = {font = "msgfont", icon = "stop_sign"};
+							Comm.deliverChatMessage(msg);
+				end
+			</script>
+		</buttoncontrol>
+	</template>
+	<template name="player_stop">
+		<stop_base>
+			<anchored height="20" width="20">
+				<top offset="0" />
+				<left anchor="left" relation="relative" offset="45" />
+			</anchored>
+		</stop_base>
+	</template>
+	
+	<template name="raise_base">
+		<buttoncontrol>
+			<icon normal="raise_hand_button" pressed="raise_hand_button" hover="raise_hand_button" />
+			<tooltip><text>Double-Click to raise hand</text></tooltip>
+			<script>
+				function onDoubleClick()
+							local msg = {font = "msgfont", text = "Miss Saaaarrrrraaaaaaaaaaahhhhhhhhh"};
+				
+							local portrait
+							if User.isHost() then
+								portrait = "portrait_gm_token";
+								msg.sender = GmIdentityManager.getCurrent()
+							else
+								portrait = "portrait_" .. User.getCurrentIdentity() .. "_chat";
+								msg.sender = User.getIdentityLabel();
+							end
+							
+							msg.icon = {portrait,"raise_hand_chat"}
+							
+							Comm.deliverChatMessage(msg);
+				end
+			</script>
+		</buttoncontrol>
+	</template>
+	<template name="player_raise">
+		<raise_base>
+			<anchored height="20" width="20">
+				<top offset="5" />
+				<left anchor="left" relation="relative" offset="20" />
+			</anchored>
+		</raise_base>
+	</template>
+
+</root>
